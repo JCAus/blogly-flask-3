@@ -1,0 +1,30 @@
+.profile_pic {
+    position: relative;
+    display: flex;
+    width: 200px;
+    height: 200px;
+}
+
+.signUpBtn {
+    border: royalblue;
+    background-color: azure;
+    color: royalblue
+}
+
+.saveBtn {
+    border: royalblue;
+    background-color: azure;
+    color: royalblue
+}
+
+.deleteBtn {
+    border: red;
+    background-color: red;
+    color: white; 
+}
+
+.editBtn {
+    border: royalblue;
+    background-color: azure;
+    color: royalblue
+}

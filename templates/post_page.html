@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Edit profile{% endblock %}
+{% block content %}
+
+<form method="POST">
+    <p>Title: <input type="text" name="title"></p>
+    <p>Content: <input type="text" name="content"></p>
+    
+    <button class="saveBtn">Post</button>
+</form>
+
+{% endblock %}

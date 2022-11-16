@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}User Profile{% endblock %}
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <section class="messages">
+    {% for msg in get_flashed_messages() %}
+        <p class="err">{{ msg }}</p>
+    {% endfor %}
+    </section>
+    {% endif %}
+{% endwith %}
+<img src="{{user.img_url}}" class="profile_pic">
+<p><h2>{{user.first_name}} {{user.last_name}}</h2></p>
+<p>
+    <form action="/edit_profile/{{user.id}}" method="GET" class="editBtn">
+        <button>Edit</button>
+    </form>
+    <form method="POST">
+        <button class="deleteBtn">Delete</button>
+    </form>
+</p>
+<p>Posts</p>
+<ul>
+    {% for post in posts %}
+    <li><h4><a href="/{{post.id}}">{{post.title}}</a> {{post.friendly_date}}</h4></li>
+    {% endfor %}
+</ul>
+<form action="/post-page/{{user.id}}" method="GET">
+    <button>Make a post</button>
+</form>
+{% endblock %}

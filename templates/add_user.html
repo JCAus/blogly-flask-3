@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Make a profile{% endblock %}
+{% block content %}
+<h1>Make a profile</h1>
+<form method="POST">
+    <p>First name: <input type="text" name="first_name"></p>
+    <p>Last name: <input type="text" name="last_name"></p>
+    <p>Image URL: <input type="text" id="img" name="img_url"></p>
+    <button class="saveBtn">Save</button>
+</form>
+{% endblock %}
